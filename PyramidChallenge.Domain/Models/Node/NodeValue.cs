@@ -2,21 +2,21 @@
 {
     public struct NodeValue
     {
-		public int Value { get; }
+        public int Value { get; }
 
-		private NodeValue(int value)
-		{
-			IsEven = value % 2 == 0;
-			Value = value;
-		}
+        private NodeValue(int value)
+        {
+	        IsEven = value % 2 == 0;
+	        Value = value;
+        }
 
-		public static NodeValue Create(int value) => new NodeValue(value);
-		public static NodeValue Parse(string value) => new NodeValue(int.Parse(value));
+        public static NodeValue Create(int value) => new NodeValue(value);
+        public static NodeValue Parse(string value) => new NodeValue(int.Parse(value));
 
-		public bool IsEven { get; }
-		public bool IsOdd => !IsEven;
+        public bool IsEven { get; }
+        public bool IsOdd => !IsEven;
 
-		public override string ToString() => Value.ToString();
+        public override string ToString() => Value.ToString();
 
         public bool Equals(NodeValue other) => Value == other.Value;
 
