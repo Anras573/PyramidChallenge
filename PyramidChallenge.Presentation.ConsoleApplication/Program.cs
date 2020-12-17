@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using PyramidChallenge.Bootstrapping;
 using PyramidChallenge.Domain.Acquaintances;
 using PyramidChallenge.Domain.Extensions;
 using PyramidChallenge.Domain.Models.Node;
@@ -23,7 +24,7 @@ namespace PyramidChallenge.Presentation.ConsoleApplication
         public static void Main(string[] args)
         {
             var services = new ServiceCollection();
-            Bootstrapper.Bootstrapper.Bootstrap(services);
+            Bootstrapper.Bootstrap(services);
 
             _serviceProvider = services.BuildServiceProvider();
 

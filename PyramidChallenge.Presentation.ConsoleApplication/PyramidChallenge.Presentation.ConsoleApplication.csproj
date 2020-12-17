@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PyramidChallenge.Bootstrapper\PyramidChallenge.Bootstrapper.csproj" />
+    <ProjectReference Include="..\PyramidChallenge.Bootstrapper\PyramidChallenge.Bootstrapping.csproj" />
     <ProjectReference Include="..\PyramidChallenge.Domain\PyramidChallenge.Domain.csproj" />
   </ItemGroup>
 

@@ -5,7 +5,7 @@ using PyramidChallenge.Domain.Models.Node;
 using PyramidChallenge.Domain.Parsers;
 using System.Collections.Generic;
 
-namespace PyramidChallenge.Bootstrapper
+namespace PyramidChallenge.Bootstrapping
 {
     public static class Bootstrapper
     {

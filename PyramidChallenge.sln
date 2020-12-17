@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PyramidChallenge.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PyramidChallenge.UnitTest.Domain", "PyramidChallenge.UnitTest.Domain\PyramidChallenge.UnitTest.Domain.csproj", "{21240366-7236-4A17-81D5-FCFE81AFD10F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PyramidChallenge.Bootstrapper", "PyramidChallenge.Bootstrapper\PyramidChallenge.Bootstrapper.csproj", "{8A8F6B72-D589-4885-8018-BFA851C3BC13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PyramidChallenge.Bootstrapping", "PyramidChallenge.Bootstrapper\PyramidChallenge.Bootstrapping.csproj", "{8A8F6B72-D589-4885-8018-BFA851C3BC13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
