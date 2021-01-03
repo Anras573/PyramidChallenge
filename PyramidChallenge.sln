@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PyramidChallenge.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PyramidChallenge.UnitTest.Domain", "PyramidChallenge.UnitTest.Domain\PyramidChallenge.UnitTest.Domain.csproj", "{21240366-7236-4A17-81D5-FCFE81AFD10F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PyramidChallenge.Bootstrapping", "PyramidChallenge.Bootstrapper\PyramidChallenge.Bootstrapping.csproj", "{8A8F6B72-D589-4885-8018-BFA851C3BC13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PyramidChallenge.Bootstrapping", "PyramidChallenge.Bootstrapping\PyramidChallenge.Bootstrapping.csproj", "{A3D9E9FF-16FB-4CA9-BF21-A89EC2CDC4E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{21240366-7236-4A17-81D5-FCFE81AFD10F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21240366-7236-4A17-81D5-FCFE81AFD10F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21240366-7236-4A17-81D5-FCFE81AFD10F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8A8F6B72-D589-4885-8018-BFA851C3BC13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8A8F6B72-D589-4885-8018-BFA851C3BC13}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8A8F6B72-D589-4885-8018-BFA851C3BC13}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8A8F6B72-D589-4885-8018-BFA851C3BC13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D9E9FF-16FB-4CA9-BF21-A89EC2CDC4E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D9E9FF-16FB-4CA9-BF21-A89EC2CDC4E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D9E9FF-16FB-4CA9-BF21-A89EC2CDC4E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D9E9FF-16FB-4CA9-BF21-A89EC2CDC4E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
