@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using PyramidChallenge.Bootstrapping;
 using PyramidChallenge.Domain.Acquaintances;
 using PyramidChallenge.Domain.Extensions;
@@ -13,25 +14,41 @@ namespace PyramidChallenge.Presentation.ConsoleApplication
 {
     public class Program
     {
-        private static IServiceProvider _serviceProvider;
+        private readonly List<Action> _options;
+        private readonly IParser<IEnumerable<string>, BinaryNode> _parser;
+        private readonly ITraverser _traverser;
 
-        private static readonly List<Action> _options = new List<Action>
+        public Program(IParser<IEnumerable<string>, BinaryNode> parser, ITraverser traverser)
         {
-            TraverseDemoInput,
-            TraverseFile
-        };
+            _options = new List<Action>
+            {
+                TraverseDemoInput,
+                TraverseFile
+            };
+
+            _parser = parser;
+            _traverser = traverser;
+        }
 
         public static void Main(string[] args)
         {
-            var services = new ServiceCollection();
-            Bootstrapper.Bootstrap(services);
-
-            _serviceProvider = services.BuildServiceProvider();
-
-            ListOptions();
+            var host = CreateHostBuilder(args).Build();
+            var program = host.Services.GetRequiredService<Program>();
+            
+            program.ListOptions();
         }
 
-        private static void ListOptions()
+        private static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            return Host.CreateDefaultBuilder(args).ConfigureServices(services =>
+            {
+                Bootstrapper.Bootstrap(services);
+
+                services.AddSingleton<Program>();
+            });
+        }
+
+        private void ListOptions()
         {
             Console.WriteLine("Choose option to run, or enter exit to exit program.");
 
@@ -56,25 +73,22 @@ namespace PyramidChallenge.Presentation.ConsoleApplication
             ListOptions();
         }
 
-        private static void TraverseDemoInput()
+        private void TraverseDemoInput()
         {
             const string path = "Files/pyramid.txt";
 
             ParseFile(path);
         }
 
-        private static void TraverseFile()
+        private void TraverseFile()
         {
             var path = ConsoleHelper.GetFile("Input file");
 
             ParseFile(path);
         }
 
-        private static void ParseFile(string path)
+        private void ParseFile(string path)
         {
-            var _parser = _serviceProvider.GetRequiredService<IParser<IEnumerable<string>, BinaryNode>>();
-            var _traverser = _serviceProvider.GetRequiredService<ITraverser>();
-
             Console.WriteLine("Input:");
 
             var lines = File.ReadLines(path);
